@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap');
+
+/*Cores Alteradas*/
+:root{
+    --corpo:#22252e;
+    --vermelhof1:#7A1E2F;
+    --verdefn:#0C661F;
+    --azulbr:#243757;
+}
+/* 
+Cores Originais
+
+vermelho: #7A1E2F
+amarelo: #EAE46E
+laranja: #F1654C
+verde flat: #00B5B5
+verde escuro: #0C661F
+azul navy: #243757
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Arial,'Roboto',Helvetica, sans-serif;
+    margin-top: 150px;
+    background-color: var(--corpo);
+}
+
+/* Float four columns side by side */
+.column1,.column2, .column3 {
+    float: left;
+    width: 350px;
+    padding: 0 10px;
+    /*
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    *?
+     */
+}
+
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clear floats after the columns
+.row:after {
+    content: "";
+    display: flex;
+    clear: both;
+}
+*/
+/* Style the counter cards */
+.card1, .card2, .card3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    border-radius: 9px;
+}
+
+.card1{
+    background-color:var(--vermelhof1);
+}
+.card2{
+    background-color: var(--verdefn);
+}
+.card3{
+    background-color: var(--azulbr);
+}
+
+.posicao {
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 9px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.dadosPosicao {
+    /*border: 1px solid black; */
+    border-radius: 9px;
+    padding: 7px;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.pedidos {
+    display: flex;
+    justify-content: center;
+    border-radius: 9px;
+    padding: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pedBloq {
+
+    border-radius: 9px;
+    padding: 9px;
+    background-color: #F1654C;
+}
+.pedLib{
+    border-radius: 9px;
+    padding: 9px;
+    background-color: #00B5B5;
+}
+.dadoPed {
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.tipoos20{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.tipoos22{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#assinatura , p {
+    background-color: var(--corpo);
+    white-space: nowrap;
+    text-shadow: 0px 0px 2px rgba(123,105,105,0.72);
+    font-family: 'Roboto';
+    font-size: 1.1em;
+    color: antiquewhite;
+    text-align: center;
+  }
+  
+   /* Layout em dispositivos móveis */
+   @media screen and (max-width: 767px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    .column1, .column2, .column3 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 220px) and (orientation: landscape) {
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+    }
+    .column1, .column2, .column3 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    #assinatura{
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+    }
+  }
+    /* Responsive columns - one column layout (vertical) on small screens */
+/* Layout em desktops */
+@media screen and (min-width: 768px){
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .column1, .column2, .column3 {
+      flex: 1;
+      padding: 0 10px;
+    }
+  }
+  /*Iphone XR / p ao meio*/
+  @media screen and (min-width: 767px) and (orientation: landscape) {
+    p{
+        margin: 0 auto;
+        margin-left: 70px ;
+    }
+  }
+  /*GalaxyS9+ / p ao meio*/
+  @media screen and (max-width:766px) and (orientation: landscape) {
+    p{
+        margin: 0 auto;
+        margin-left: 300px;
+    }
+  }
+  @media screen and (max-width:657px) and (orientation: landscape) {
+    p{
+        margin: 0 auto;
+        margin-left: 300px;
+    }
+  }
+  /*Iphone 4*/
+  @media screen and (max-width:480px) and (min-width:320px) and (orientation:landscape) {
+    p{
+        margin: 0 auto;
+        margin-left: 500px;
+    }
+  }
+  @media screen and (max-width:1280px) and (min-width:800px) and (orientation:landscape) {
+    p{
+      font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 45px;
+    }
+  }
+  @media screen and (max-width:1920px) and (min-width:1080px) and (orientation:landscape) {
+    .row,p{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 1.6em;
+    }
+  }
+
+
+  
+  
