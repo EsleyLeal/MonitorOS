@@ -1,4 +1,4 @@
-# DashbBoard
+# DashBoard
 
 Atualmente recebi um desafio na empresa na qual eu trabalho de um DashBoard ja criado sem responsividade. O projeto foi passado a minha pessoa para que poudesse deixar reesponsivel em todos os dispotivos. Foi um desafio, mas com a persistencia eu pude alcancar o resultado.
 
